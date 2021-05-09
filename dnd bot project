@@ -1,0 +1,11 @@
+import discord
+
+client = discord.Client()
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('!ilithid'):
+       await message.channel.send('Mind Flayers are an alien species with octopus like faces. their goal is to conquer the surface of a planet, but their sunlight sensitivity forbids them from doing so easily.')
